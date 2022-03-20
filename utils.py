@@ -2,10 +2,9 @@ import emoji
 import re
 
 
-regexp = emoji.get_emoji_regexp(language="python")
-pattern = re.compile(regexp)
+emoji_regexp = emoji.get_emoji_regexp(language="python")
+emoji_pattern = re.compile(emoji_regexp)
 
 
 def extract_emojis(s):
-    return re.findall(pattern, s)
-
+    return re.findall(emoji_pattern, s)
